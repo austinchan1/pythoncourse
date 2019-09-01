@@ -32,6 +32,10 @@ def exercise01():
     # Create a variable x and set it to 5.
 
     # ------ Place code below here \/ \/ \/ ------
+    
+    #Not much to say here, just want to get in the habit of leaving comments.
+    
+    x = 5
 
     # ------ Place code above here /\ /\ /\ ------
 
@@ -42,7 +46,13 @@ def exercise02():
     # Create a string variable called name and set it to your first name.
 
     # ------ Place code below here \/ \/ \/ ------
-
+    
+    #Defined a variable as a string first before storing my name in it.
+    #I know it's possible to just assign my name directly without declaring the type.
+    
+    name = str()
+    name ="Austin"
+    
     # ------ Place code above here /\ /\ /\ ------
 
     return name
@@ -53,6 +63,10 @@ def exercise03():
 
     # ------ Place code below here \/ \/ \/ ------
 
+    #Didn't declare the variable as a string first.
+
+    sentence ="This is a sentence."
+
     # ------ Place code above here /\ /\ /\ ------
 
     return sentence
@@ -62,6 +76,14 @@ def exercise04():
     # Create two string variables. The first variable is called first_name, the second is last_name. Set both variables to your first name and last name respectively.
 
     # ------ Place code below here \/ \/ \/ ------
+
+    #Mostly a repeat of exercise2
+
+    first_name = str()
+    last_name = str()
+    
+    first_name ="Austin"
+    last_name ="Chan"
 
     # ------ Place code above here /\ /\ /\ ------
 
@@ -74,6 +96,16 @@ def exercise05():
 
     # ------ Place code below here \/ \/ \/ ------
 
+    #The only difference between this and exercise4 is that I checked the type of first name, as instructed.
+
+    first_name = str()
+    last_name = str()
+    
+    first_name ="Austin"
+    last_name ="Chan"
+
+    name_type = type(first_name)
+
     # ------ Place code above here /\ /\ /\ ------
 
     return first_name, last_name, name_type
@@ -84,6 +116,13 @@ def exercise06():
 
     # ------ Place code below here \/ \/ \/ ------
 
+    #Assigned the two variables and then multiplied them together.
+
+    hours_worked = 20
+    wage_per_hour = 15
+    
+    total_pay = hours_worked * wage_per_hour
+
     # ------ Place code above here /\ /\ /\ ------
     return hours_worked, wage_per_hour, total_pay
 
@@ -91,6 +130,14 @@ def exercise06():
 def exercise07():
     # Create a variable wage and assign 17.0 to it. Print to the screen the datatype of wage. Create a second variable called doubled that prints to the screen 2 times wage
     # ------ Place code below here \/ \/ \/ ------
+
+    #Used the print function to print the data type of wage and the value of doubled.
+
+    wage = 17.0
+    print(type(wage))
+    
+    doubled = wage * 2
+    print(doubled)
 
     # ------ Place code above here /\ /\ /\ ------
     return wage, doubled
@@ -100,6 +147,15 @@ def exercise08():
     # Assign 5 to the variable quantity, 'hello' to the variable hello and a variable hello_repeated that holds a string that contains whatever is contained in the variable hello repeated quantity times
 
     # ------ Place code below here \/ \/ \/ ------
+
+    #Strings can't be multiplied to each other, but strings and integers can be multiplied.
+    #I think python just repeats the string however many times you multiply it.
+    #So in this case, "hello" is repeated 5 times.
+
+    quantity = 5
+    hello = "hello"
+    
+    hello_repeated = hello * quantity
 
     # ------ Place code above here /\ /\ /\ ------
 
@@ -111,6 +167,13 @@ def exercise09():
 
     # ------ Place code below here \/ \/ \/ ------
 
+    #Integers can be multiplied with each other, as expected.
+
+    qty = 10
+    price = 5
+    
+    total_cost = qty * price
+
     # ------ Place code above here /\ /\ /\ ------
 
     return qty, price, total_cost
@@ -120,6 +183,13 @@ def exercise10():
     # Create 5 variables named factorN where N is the numbers 1 to 5 and set them to 1 through 5, respectively. Create a variable called product that holds the product of the 5 variables
 
     # ------ Place code below here \/ \/ \/ ------
+
+    #This probably would have been more elegant with a dictionary, but then factorN technically wouldn't be a variable.
+    #Anyway, I used multiple variable assignment instead, which is easier than writing 5 lines.
+
+    factor1, factor2, factor3, factor4, factor5 = 1, 2, 3, 4, 5
+
+    product = factor1 * factor2 * factor3 * factor4 * factor5
 
     # ------ Place code above here /\ /\ /\ ------
 
@@ -131,6 +201,13 @@ def exercise11():
 
     # ------ Place code below here \/ \/ \/ ------
 
+    #The way I did this was a little unconventional.
+    #The round() function doesn't specify if you want to round up or down.
+    #So instead I multiplied pi by 10^10, rounded down and then divided by 10^10.
+    #This lets me round down with 10 decimal places.
+
+    pi = math.floor((math.pi * (10 ** 10)))/(10 ** 10)
+
     # ------ Place code above here /\ /\ /\ ------
     return pi
 
@@ -139,6 +216,11 @@ def exercise12():
     # Create a variable called x and set it to 10. Then create a variable y that equals to x to the 7th power
 
     # ------ Place code below here \/ \/ \/ ------
+
+    #The operator for exponents is **, as demonstrated below.
+
+    x = 10
+    y = x ** 7
 
     # ------ Place code above here /\ /\ /\ ------
     return x, y
@@ -150,6 +232,15 @@ def exercise13():
     pi = 3.14159
     # ------ Place code below here \/ \/ \/ ------
 
+    #volume_sphere and radius are initialized here
+
+    volume_sphere = float()
+    r = 7
+    
+    #The formula for the volume of a sphere is 4/3*pi*radius^3
+    
+    volume_sphere = (4/3) * pi * (r ** 3)
+
     # ------ Place code above here /\ /\ /\ ------
     return pi, r, volume_sphere
 
@@ -158,6 +249,16 @@ def exercise14():
     # Create a variables area, length, height. Set length and height equal to 50 and 10.2 respectively. Assign area to the product of length and height, assign the variable area_type to the datatype of area
 
     # ------ Place code below here \/ \/ \/ ------
+
+    #I noticed with this problem there was some weird rounding.
+    #Instead of 510, python makes it 509.999999999 instead.
+    #I wonder if it has anything to do with multiplying variables of different types.
+
+    length = 50
+    height = 10.2
+    
+    area = length * height
+    area_type = type(area)
 
     # ------ Place code above here /\ /\ /\ ------
     return area, length, height, area_type
@@ -168,6 +269,13 @@ def exercise15():
 
     # ------ Place code below here \/ \/ \/ ------
 
+    #When multiplying integers, it works properly as expected.
+
+    speed_mph = 80
+    duration = 3
+    
+    distance = speed_mph * duration
+
     # ------ Place code above here /\ /\ /\ ------
 
     return distance, speed_mph, duration
@@ -177,6 +285,15 @@ def exercise16():
     # Implement pythogorean thereom and find the length of hypotenuse c given sides a and b. Select any numbers for a and b. Use math.sqrt() for square root.
 
     # ------ Place code below here \/ \/ \/ ------
+
+    #Classic 3,4,5 triangle.
+    #Pythogorean theorem is a^2 + b^2 = c^2
+    #To get c, just take the square root of (a^2 + b^2) 
+
+    a = 3
+    b = 4
+    
+    c = math.sqrt((a ** 2) + (b ** 2))
 
     # ------ Place code above here /\ /\ /\ ------
     return a, b, c
