@@ -463,12 +463,28 @@ def exercise03():
     #opens file avocado.csv
     with open('avocado.csv') as csv_file:
         
+        #initializes counter to count odd numbered lines
+        counter = 0
+        
         #reads file
         reader = csv.reader(csv_file)
         
         #prints file
         for r in reader:
-            print(r)
+            
+            #increments counter
+            counter += 1
+            
+            #if counter is not divisible by 2, print line
+            if(counter % 2 != 0):
+                
+                #prints line
+                print(r)
+            
+            #else, go to next loop
+            else:
+                
+                continue
 
     return csv_file, reader
 
